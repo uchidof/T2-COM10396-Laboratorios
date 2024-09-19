@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laboratórios de informática da UFES</title>
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom">
+            <a href="views/apresentacao.php"
+                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img src="views/images/ufes-logo.png" alt="UFES Logo">&nbsp;&nbsp;
+                <h4 class="m-0">InfoLabs UFES</h4>
+            </a>
+
+            <!-- Menu Superior Horizontal -->
+            <ul class="nav col-md-12 justify-content-center">
+                <li><a href="views/apresentacao.php" class="nav-link px-2 link-secondary"><b>APRESENTAÇÃO</b></a>
+                </li>
+                <li><a href="views/salas.php" class="nav-link px-2 link-secondary"><b>SALAS</b></a></li>
+                <li><a href="controller/controllerLabs.php?opcao=1"
+                        class="nav-link px-2 link-secondary"><b>SUPORTE</b></a></li>
+                <li><a href="views/formContato.php" class="nav-link px-2 link-secondary"><b>FALE CONOSCO</b></a></li>
+                <li><a href='views/formLogin.php' class='nav-link px-2 link-secondary'><b>LOGIN (Entrar)</b></a></li>
+
+            </ul>
+
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <div class="row my-5">
+            <!-- Menu Lateral -->
+            <aside class="col-md-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active"
+                        aria-current="true"><b>MENU</b></a>
+                    <a href="views/infraestrutura.php"
+                        class="list-group-item list-group-item-action">INFRAESTRUTURA</a>
+                    <a href="controller/controllerLabs.php?opcao=2"
+                        class="list-group-item list-group-item-action">MONITORIA</a>
+                    <a href="controller/controllerInformacoes.php?opcao=3"
+                        class="list-group-item list-group-item-action">INFORMAÇÕES ÚTEIS</a>
+                </div>
+            </aside>
+
+            <!-- Seção Principal -->
+            <section class="col-md-9">
+
+                <h1>Laboratórios de TI</h1>
+
+                <div class="lab" onclick="moveToLocation('redes')">
+                    <h2>Laboratório de Redes de Computadores</h2>
+                    <p><strong>Objetivo:</strong> Desenvolver e testar redes de comunicação de dados.</p>
+                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, 08h00 - 18h00</p>
+                    <div class="details">
+                        <p><strong>Criação:</strong> Fundado em 2010 como parte da expansão do curso de Redes.</p>
+                        <p><strong>Importância:</strong> Essencial para capacitar os alunos na implementação e
+                            manutenção de redes
+                            seguras e eficientes, sendo um dos laboratórios mais utilizados por empresas para parcerias
+                            de inovação.</p>
+                    </div>
+                </div>
+
+                <div class="lab" onclick="moveToLocation('software')">
+                    <h2>Laboratório de Desenvolvimento de Software</h2>
+                    <p><strong>Objetivo:</strong> Criar e testar aplicações de software para diversas plataformas.</p>
+                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, 09h00 - 19h00</p>
+                    <div class="details">
+                        <p><strong>Criação:</strong> Estabelecido em 2012 para atender à crescente demanda por
+                            desenvolvimento de
+                            software no mercado local.</p>
+                        <p><strong>Importância:</strong> Crucial para a formação de programadores e desenvolvedores que
+                            impulsionam o
+                            setor de tecnologia com soluções inovadoras.</p>
+                    </div>
+                </div>
+
+                <div class="lab" onclick="moveToLocation('seguranca')">
+                    <h2>Laboratório de Segurança da Informação</h2>
+                    <p><strong>Objetivo:</strong> Analisar e implementar técnicas de segurança digital.</p>
+                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, 08h30 - 17h30</p>
+                    <div class="details">
+                        <p><strong>Criação:</strong> Inaugurado em 2015 em resposta à necessidade crescente de
+                            profissionais em
+                            cibersegurança.</p>
+                        <p><strong>Importância:</strong> Importante para preparar especialistas em segurança que lidam
+                            com os maiores
+                            desafios de proteção de dados na era digital.</p>
+                    </div>
+                </div>
+
+
+                <div class="lab" onclick="moveToLocation('ia')">
+                    <h2>Laboratório de Inteligência Artificial</h2>
+                    <p><strong>Objetivo:</strong> Pesquisa e desenvolvimento de algoritmos e aplicações de IA.</p>
+                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, 08h00 - 17h00</p>
+                    <div class="details">
+                        <p><strong>Criação:</strong> Fundado em 2018 com foco na pesquisa de aprendizado de máquina e
+                            inteligência
+                            artificial aplicada.</p>
+                        <p><strong>Importância:</strong> Importante para preparar pesquisadores e profissionais que
+                            desenvolvem soluções
+                            inovadoras em áreas como reconhecimento de padrões e automação.</p>
+                    </div>
+                </div>
+
+                <div class="lab" onclick="moveToLocation('programacao')">
+                    <h2>Laboratório de Programação</h2>
+                    <p><strong>Objetivo:</strong> Ensinar e desenvolver habilidades em programação para diversas
+                        linguagens e
+                        plataformas.</p>
+                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, 09h00 - 18h00</p>
+                    <div class="details">
+                        <p><strong>Criação:</strong> Fundado em 2014 para atender à crescente demanda de profissionais
+                            qualificados em
+                            programação.</p>
+                        <p><strong>Importância:</strong> Essencial para capacitar os alunos a desenvolver soluções em
+                            software, jogos,
+                            automação e outras áreas tecnológicas, fomentando a inovação e empreendedorismo no setor.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Mapa de Localização -->
+                <h2>Mapa de Localização</h2>
+                <div id="map"></div>
+        </div>
+
+    </div>
+
+    <!-- Incluindo o JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializando o mapa com uma localização padrão
+        var map = L.map('map').setView([-20.7614, -41.5377], 15);
+
+        // Adicionando o tile layer do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionando um marcador inicial no mapa
+        var marker = L.marker([-20.7614, -41.5377]).addTo(map)
+            .bindPopup('Campus UFES, Alegre-ES')
+            .openPopup();
+
+        // Função para mover o mapa para a localização do laboratório selecionado
+        function moveToLocation(laboratorio) {
+            var locations = {
+                'redes': {
+                    lat: -20.7613939,
+                    lng: -41.5366848,
+                    popup: 'Laboratório de Redes de Computadores',
+                    link: '../views/sala_redes.html' // Página de detalhes do laboratório de redes
+                },
+                'software': {
+                    lat: -20.7611927,
+                    lng: -41.5359173,
+                    popup: 'Laboratório de Desenvolvimento de Software',
+                    link: '../views/salas.html' // Página de detalhes do laboratório de software
+                },
+                'seguranca': {
+                    lat: -20.7612356,
+                    lng: -41.5367314,
+                    popup: 'Laboratório de Segurança da Informação',
+                    link: '../views/salas.html' // Página de detalhes do laboratório de segurança
+                },
+                'ia': {
+                    lat: -20.7621991,
+                    lng: -41.5364442,
+                    popup: 'Laboratório de Inteligência Artificial',
+                    link: '../views/salas.html' // Página de detalhes do laboratório de IA
+                },
+                'programacao': {
+                    lat: -20.7621991,
+                    lng: -41.5364442,
+                    popup: 'Laboratório de Programação',
+                    link: '../views/salas.html' // Página de detalhes do laboratório de programação
+                },
+            };
+
+            var location = locations[laboratorio];
+            map.setView([location.lat, location.lng], 16);
+
+            // Atualizando o marcador com o popup que contém o link
+            marker.setLatLng([location.lat, location.lng])
+                .setPopupContent(`${location.popup} <br><a href="${location.link}" target="_blank">Ver mais detalhes</a>`)
+                .openPopup();
+
+            // Fazer o scroll suave para o mapa
+            document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    </section>
+    </div> <!-- Fim do container principal -->
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="container">
+            <div class="row">
+                <!-- Coluna de Texto e Logo -->
+                <div class="col-md-12 d-flex align-items-center justify-content-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+                        <!-- Ícone de exemplo, substitua por um ícone válido se necessário -->
+                        <svg class="bi" width="30" height="24" fill="currentColor">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+                    <span class="text-muted">&copy; 2024 - COM10396 Desenvolvimento de Sistemas para WEB - UFES, Alegre
+                        ES<br>Desenvolvido por:<br>Filipe Uchidomari Bento - filipe.bento@edu.ufes.br<br>Pedro Henrique
+                        da Silva Moreno - pedro.h.moreno@edu.ufes.br</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
